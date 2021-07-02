@@ -29,3 +29,14 @@
 2021-07-02 14:21:06,138 - /127.0.0.1:57644 "PUT /predictions/ocr_model HTTP/1.1" 503 183
 2021-07-02 14:22:25,779 - /127.0.0.1:57660 "PUT /predictions/ocr_model HTTP/1.1" 200 166
 2021-07-02 14:33:56,611 - /127.0.0.1:51184 "GET /models HTTP/1.1" 200 8
+2021-07-02 15:46:25,789 - /127.0.0.1:51840 "POST /models?url=ocr_model&batch_size=256&max_batch_delay=50 HTTP/1.1" 404 3
+2021-07-02 15:46:52,259 - /127.0.0.1:58874 "GET /ping HTTP/1.1" 200 4
+2021-07-02 15:47:05,540 - /127.0.0.1:51854 "GET /models HTTP/1.1" 200 0
+2021-07-02 15:47:34,323 - /127.0.0.1:51864 "POST /models?url=ocr_model.mar&batch_size=256&max_batch_delay=50 HTTP/1.1" 409 684
+2021-07-02 15:48:55,427 - /127.0.0.1:51884 "GET /models/ocr_model HTTP/1.1" 200 27
+2021-07-02 16:12:58,528 - /127.0.0.1:52428 "POST /models?url=resnet-152.mar&batch_size=8&max_batch_delay=50 HTTP/1.1" 404 2
+2021-07-02 16:14:01,363 - /127.0.0.1:52446 "POST /models?url=ocr_model.mar&batch_size=8&max_batch_delay=50 HTTP/1.1" 409 664
+2021-07-02 16:14:11,877 - /127.0.0.1:52454 "POST /models?url=ocr_model.mar&batch_size=8&max_batch_delay=50&version=2.0 HTTP/1.1" 409 648
+2021-07-02 16:14:19,807 - /127.0.0.1:52458 "GET /models/ocr_model HTTP/1.1" 200 3
+2021-07-02 16:36:11,664 - /127.0.0.1:52802 "GET /models/ocr_model HTTP/1.1" 200 13
+2021-07-02 16:41:29,773 - /127.0.0.1:52908 "GET /models/ocr_model HTTP/1.1" 200 14
