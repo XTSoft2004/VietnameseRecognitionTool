@@ -12,6 +12,7 @@ from config import Cfg
 from vocab import Vocab
 from PIL import Image
 import io
+import json
 
 class OCRHandler(BaseHandler):
     def __init__(self):
@@ -121,7 +122,6 @@ class OCRHandler(BaseHandler):
         return result
 
     def postprocess(self, data):
-        print('Result: ', data)
         return [data]
 
     def translate(self, tensor, max_seq_length=128, sos_token=1, eos_token=2):

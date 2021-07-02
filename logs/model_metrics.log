@@ -18,3 +18,5 @@
 2021-07-02 12:37:30,906 - PredictionTime.Milliseconds:151.46|#ModelName:ocr_model1,Level:Model|#hostname:manhbui-Inspiron-5567,requestID:8dbceed5-4541-4fff-a3ee-d74363aaf983,timestamp:1625204250
 2021-07-02 13:52:03,767 - HandlerTime.Milliseconds:188.88|#ModelName:ocr_model,Level:Model|#hostname:manhbui-Inspiron-5567,requestID:cfdad52b-2373-489b-9345-88d40e725da6,timestamp:1625208723
 2021-07-02 13:52:03,769 - PredictionTime.Milliseconds:188.94|#ModelName:ocr_model,Level:Model|#hostname:manhbui-Inspiron-5567,requestID:cfdad52b-2373-489b-9345-88d40e725da6,timestamp:1625208723
+2021-07-02 14:22:25,777 - HandlerTime.Milliseconds:157.65|#ModelName:ocr_model,Level:Model|#hostname:manhbui-Inspiron-5567,requestID:64160d17-730e-4f85-8a0a-ce83456e8337,timestamp:1625210545
+2021-07-02 14:22:25,780 - PredictionTime.Milliseconds:157.72|#ModelName:ocr_model,Level:Model|#hostname:manhbui-Inspiron-5567,requestID:64160d17-730e-4f85-8a0a-ce83456e8337,timestamp:1625210545
