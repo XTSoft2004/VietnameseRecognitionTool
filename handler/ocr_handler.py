@@ -41,11 +41,7 @@ class OCRHandler(BaseHandler):
             if torch.cuda.is_available() and properties.get("gpu_id") is not None
             else "cpu"
         )
-        self.device = torch.device(
-            self.map_location + ":" + str(properties.get("gpu_id"))
-            if torch.cuda.is_available() and properties.get("gpu_id") is not None
-            else self.map_location
-        )
+        self.device = torch.device("cpu")
         self.manifest = context.manifest
 
 
@@ -53,32 +49,27 @@ class OCRHandler(BaseHandler):
         self.vocab = Vocab(config["vocab"])
 
         model_dir = properties.get("model_dir")
-        models_pt_path = None
-        if "serializedFile" in self.manifest["model"]:
-            serialized_file = self.manifest["model"]["serializedFile"]
-            models_pt_path = os.path.join(model_dir, serialized_file)
+        cnn_weight_path = os.path.join(model_dir, 'cnn_model.pt')
+        decoder_weight_path = os.path.join(model_dir, 'decoder_model.pt')
+        encoder_weight_path = os.path.join(model_dir, 'encoder_model.pt')
 
         try:
-            with zipfile.ZipFile(models_pt_path, "r") as zip_ref:
-                zip_ref.extractall(".")
-
-            self.cnn = torch.jit.load(
-                "cnn_model.pt", map_location=self.device
-            )
-            self.encoder = torch.jit.load(
-                "encoder_model.pt", map_location=self.device
-            )
-            self.decoder = torch.jit.load(
-                "decoder_model.pt", map_location=self.device
-            )
+            self.cnn = torch.jit.load(cnn_weight_path, map_location=self.device)
+            self.encoder = torch.jit.load(encoder_weight_path, map_location=self.device)
+            self.decoder = torch.jit.load(decoder_weight_path, map_location=self.device)
             self.initialized = True
         except:
             self.initialized = False
 
+
     def preprocess(self, requests):
-        images = [self.preprocess_one_image(req) for req in requests]
-        cluster_images, indices = self.build_cluster_images(images)
-        return cluster_images, indices
+        if len(requests) > 1:
+            images = [self.preprocess_one_image(req) for req in requests]
+            cluster_images, indices = self.build_cluster_images(images)
+            return cluster_images, indices
+        else:
+            image = self.preprocess_one_image(requests[0])
+            return image, None
 
     def preprocess_one_image(self, req):
         """
@@ -95,34 +86,42 @@ class OCRHandler(BaseHandler):
         return np.asarray(image)
 
     def inference(self, data, *args, **kwargs):
-        result = list([])
-        cluster_images, indices = data
+        images, indices = data
 
-        for _, batch_images in cluster_images.items():
-            if len(batch_images) <= self.batch_size:
-                batch_images = np.asarray(batch_images)
-                batch_images = torch.FloatTensor(batch_images)
-                batch_images = batch_images.to(self.device)
+        if indices:
+            result = list([])
+            for _, batch_images in images.items():
+                if len(batch_images) <= self.batch_size:
+                    batch_images = np.asarray(batch_images)
+                    batch_images = torch.FloatTensor(batch_images)
+                    batch_images = batch_images.to(self.device)
 
-                sent = self.translate(batch_images).tolist()
-                batch_text = self.vocab.batch_decode(sent)
-                result.extend(batch_text)
-            else:
-                for i in range(0, len(batch_images), self.batch_size):
-                    sub_batch_images = torch.FloatTensor(batch_images[i:i + self.batch_size])
-                    sub_batch_images = sub_batch_images.to(self.config['device'])
-                    sent = self.translate(sub_batch_images, self.model).tolist()
+                    sent = self.translate(batch_images).tolist()
                     batch_text = self.vocab.batch_decode(sent)
                     result.extend(batch_text)
+                else:
+                    for i in range(0, len(batch_images), self.batch_size):
+                        sub_batch_images = torch.FloatTensor(batch_images[i:i + self.batch_size])
+                        sub_batch_images = sub_batch_images.to(self.config['device'])
+                        sent = self.translate(sub_batch_images).tolist()
+                        batch_text = self.vocab.batch_decode(sent)
+                        result.extend(batch_text)
 
-        # sort result correspond to indices
-        z = zip(result, indices)
-        sorted_result = sorted(z, key=lambda x: x[1])
-        result, _ = zip(*sorted_result)
-        
+            # sort result correspond to indices
+            z = zip(result, indices)
+            sorted_result = sorted(z, key=lambda x: x[1])
+            result, _ = zip(*sorted_result)
+        else:
+            image, _ = self.process_image(images)
+            image = np.expand_dims(image, axis=0)
+            image = torch.FloatTensor(image).to(device=self.device)
+            result = self.translate(image)[0].tolist()
+            result = self.vocab.decode(result)
+
         return result
 
     def postprocess(self, data):
+        print('Result: ', data)
         return [data]
 
     def translate(self, tensor, max_seq_length=128, sos_token=1, eos_token=2):
