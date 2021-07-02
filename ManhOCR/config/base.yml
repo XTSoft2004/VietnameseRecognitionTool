@@ -1,0 +1,56 @@
+# change to list chars of your dataset or use default vietnamese chars
+
+vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0123456789! "#$%&''()*±+×,-./:;≤≥<=≠≈>←→⇔?@[\]^_{|⊥}~∑…ɣ§ϕΦζδξ𝜑βαλ⋌πησωυθγτΩ∩∪⊃⊂⊆«»Øɛзə✓■•❖➢∀µΔ∇∞∈∉∃νφ∧Γ'
+
+# cpu, cuda, cuda:0
+device: cuda:0
+
+model_type: repvgg
+seq_model_type: seq2seq
+
+seq_parameters:
+    encoder_hidden: 256
+    decoder_hidden: 256
+    img_channel: 256
+    decoder_embedded: 256
+    dropout: 0.1
+
+transformer_parameters:
+    d_model: 256
+    nhead: 8
+    num_encoder_layers: 6
+    num_decoder_layers: 6
+    dim_feedforward: 2048
+    max_seq_length: 1024
+    pos_dropout: 0.1
+    trans_dropout: 0.1
+
+optimizer:
+    pct_start: 0.1
+
+trainer:
+    print_every: 200
+    valid_every: 10000
+    # where to save our model for prediction
+    export: ./weights/vietnamese_ocr.pth.tar
+    checkpoint: ./checkpoint/transformerocr_checkpoint.pth
+    log: ./train.log
+    # null to disable compuate accuracy, or change to number of sample to enable validiation while training
+    metrics: null
+    batch_size: 70
+    num_iters: 100000000
+
+dataloader:
+    num_workers: 16
+    pin_memory: True
+    
+predictor:
+    # disable or enable beamsearch while prediction, use beamsearch will be slower
+    beamsearch: False
+
+preprocess:
+    width: 32
+    height: 356
+
+dataset:
+    # name of your dataset
