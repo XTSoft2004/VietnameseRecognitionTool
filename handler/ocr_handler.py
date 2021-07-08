@@ -1,4 +1,5 @@
 from numpy.core.numeric import indices
+from numpy.lib.type_check import imag
 from ts.torch_handler.base_handler import BaseHandler
 import os
 import torch
@@ -10,6 +11,7 @@ from collections import defaultdict
 logger = logging.getLogger(__name__)
 from config import Cfg
 from vocab import Vocab
+import base64
 from PIL import Image
 import io
 import json
@@ -76,15 +78,21 @@ class OCRHandler(BaseHandler):
         """
         Process one single image
         """
-
-        image = req.get('data')
-        if image is None:
-            image = req.get('body')
+        print('Request: ', req)
+        b64_code = req.get('data')
+        if b64_code is None:
+            b64_code = req.get('body')
 
         # create a stream from the encoded image
-        image = Image.open(io.BytesIO(image))
-        
-        return np.asarray(image)
+       # Restore OpenCV image from base64 encoding
+        str_decode = base64.b64decode(b64_code)
+        nparr = np.fromstring(str_decode, np.uint8)
+        # img_restore = cv2.imdecode(nparr, cv2.CV_LOAD_IMAGE_COLOR) for python 2
+        img_restore = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        image = np.array(img_restore)
+
+        cv2.imwrite('sample.png', image)
+        return image
 
     def inference(self, data, *args, **kwargs):
         images, indices = data
