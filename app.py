@@ -29,8 +29,7 @@ st.markdown(
 st.markdown(
     """
             * Click the button to upload a image file.
-            * Wait for the tool to convert it to DOCX format.
-            * Download your DOCX file.
+            * Wait for running
 """
 )
 

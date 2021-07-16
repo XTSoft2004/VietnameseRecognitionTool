@@ -5,17 +5,21 @@ torch-model-archiver --model-name ocr_model --serialized-file ./traced_scripts/m
 
 ## 2. Serve model
 ```
-torchserve --start --ncs --model-store ./model_store --models my_fancy_model=my_fancy_model.mar --foreground --ts-config ./config.properties
+torchserve --start --ncs --model-store ./serve/model_store --models ./serve/model_store/ocr_model.mar --foreground --ts-config ./serve/config.properties
+```
+## 3. Run demo app
+```
+streamlit run app.py
 ```
 
-## 3. Inference 
-### 3.1. Using Rest Api
+
+## 4. Inference - Using Rest Api
 ```
 curl http://127.0.0.1:8080/predictions/ocr_model -T ./sample/0.png
 ```
 
 
-## 4. Some command line related to torchserve 
+## 5. Some command line related to torchserve 
 Link: https://pytorch.org/serve/management_api.html
 - Register new model
 ```
@@ -43,7 +47,7 @@ torchserve --stop
 curl localhost:8080/ping
 ```
 
-## 5. Using torchserve-dashboard
+## 6. Using torchserve-dashboard
 Run: 
 ```
 torchserve-dashboard --server.port 8505 -- --config_path ./config.properties
