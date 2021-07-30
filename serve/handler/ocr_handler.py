@@ -91,7 +91,6 @@ class OCRHandler(BaseHandler):
         img_restore = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
         image = np.array(img_restore)
 
-        cv2.imwrite('sample.png', image)
         return image
 
     def inference(self, data, *args, **kwargs):

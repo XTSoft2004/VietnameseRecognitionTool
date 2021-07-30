@@ -1,26 +1,23 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
-
+FROM pytorch/torchserve:0.1-cpu
 
 # working dir
-WORKDIR /ocrtool_app
-
-RUN apt-get update
+WORKDIR /ocrtool_app_ver1
 
 # copy requirements file from local directory
-COPY requirements.txt /ocrtool_app/requirements.txt
+COPY requirements.txt /ocrtool_app_ver1/requirements.txt
 
 # install nessecessary library
 RUN pip install --upgrade pip
-RUN pip install -r /ocrtool_app/requirements.txt
+RUN pip install -r /ocrtool_app_ver1/requirements.txt
 
 # copy all files in the current directory to working dir
-COPY . /ocrtool_app
+COPY . /ocrtool_app_ver1
 
 # add excutable permission
-RUN chmod a+x /ocrtool_app/*
+# RUN chmod a+x /ocrtool_app_ver1/*
 
 # start
-ENTRYPOINT ["/ocrtool_app/start.sh"]
+ENTRYPOINT ["/ocrtool_app_ver1/start.sh"]
 
 # set up working port
 EXPOSE 9090

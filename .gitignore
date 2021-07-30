@@ -1,1 +1,3 @@
 __pycached__
+.vscode
+*.pth.tar
