@@ -254,3 +254,604 @@ java.lang.InterruptedException
 2021-07-16 16:15:12,043 [INFO ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stderr
 2021-07-16 16:15:12,043 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stdout
 2021-07-16 16:15:12,046 [INFO ] Thread-0 org.pytorch.serve.wlm.ModelManager - Model ocr_model unregistered.
+2021-07-31 22:04:46,487 [INFO ] main org.pytorch.serve.ModelServer - 
+Torchserve version: 0.3.1
+TS Home: /home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages
+Current directory: /home/manhbui/manhbq_workspace/OcrTool
+Temp directory: /tmp
+Number of GPUs: 0
+Number of CPUs: 4
+Max heap size: 1966 M
+Python executable: /home/manhbui/anaconda3/envs/manhbq/bin/python
+Config file: ./serve/config.properties
+Inference address: http://127.0.0.1:8085
+Management address: http://127.0.0.1:8086
+Metrics address: http://127.0.0.1:8087
+Model Store: /home/manhbui/manhbq_workspace/OcrTool/serve/model_store
+Initial Models: ./serve/model_store/ocr_model.mar
+Log dir: /home/manhbui/manhbq_workspace/OcrTool/logs
+Metrics dir: /home/manhbui/manhbq_workspace/OcrTool/logs
+Netty threads: 0
+Netty client threads: 0
+Default workers per model: 4
+Blacklist Regex: N/A
+Maximum Response Size: 6553500
+Maximum Request Size: 6553500
+Prefer direct buffer: false
+Allowed Urls: [file://.*|http(s)?://.*]
+Custom python dependency for model allowed: false
+Metrics report format: prometheus
+Enable metrics API: true
+2021-07-31 22:04:46,548 [INFO ] main org.pytorch.serve.ModelServer - Loading initial models: ./serve/model_store/ocr_model.mar
+2021-07-31 22:04:47,552 [INFO ] main org.pytorch.serve.archive.ModelArchive - eTag fcd3de595678437a92851f75e9feb55a
+2021-07-31 22:04:47,569 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Adding new version 1.0 for model ocr_model
+2021-07-31 22:04:47,570 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model ocr_model
+2021-07-31 22:04:47,570 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model ocr_model loaded.
+2021-07-31 22:04:47,570 [DEBUG] main org.pytorch.serve.wlm.ModelManager - updateModel: ocr_model, count: 4
+2021-07-31 22:04:47,647 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.
+2021-07-31 22:04:47,791 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9000
+2021-07-31 22:04:47,802 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13717
+2021-07-31 22:04:47,802 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:04:47,810 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-07-31 22:04:47,812 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:04:47,848 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9001
+2021-07-31 22:04:47,861 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13718
+2021-07-31 22:04:47,861 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:04:47,862 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:04:47,867 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-07-31 22:04:47,862 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-07-31 22:04:47,872 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9001
+2021-07-31 22:04:47,962 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9002
+2021-07-31 22:04:47,963 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13724
+2021-07-31 22:04:47,963 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:04:47,963 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:04:47,964 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-07-31 22:04:47,965 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9002
+2021-07-31 22:04:48,023 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9003
+2021-07-31 22:04:48,035 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13719
+2021-07-31 22:04:48,036 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:04:48,036 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-07-31 22:04:48,038 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:04:48,040 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9003
+2021-07-31 22:04:48,079 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9002.
+2021-07-31 22:04:48,081 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9000.
+2021-07-31 22:04:48,082 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9001.
+2021-07-31 22:04:48,083 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9003.
+2021-07-31 22:04:48,088 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://127.0.0.1:8085
+2021-07-31 22:04:48,089 [INFO ] main org.pytorch.serve.ModelServer - Initialize Management server with: EpollServerSocketChannel.
+2021-07-31 22:04:48,106 [INFO ] main org.pytorch.serve.ModelServer - Management API bind to: http://127.0.0.1:8086
+2021-07-31 22:04:48,107 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.
+2021-07-31 22:04:48,112 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8087
+2021-07-31 22:04:50,463 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2146
+2021-07-31 22:04:50,464 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-07-31 22:04:50,471 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2167
+2021-07-31 22:04:50,472 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-07-31 22:04:50,523 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2228
+2021-07-31 22:04:50,525 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-07-31 22:04:50,532 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2229
+2021-07-31 22:04:50,532 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-07-31 22:04:56,751 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 225
+2021-07-31 22:04:56,764 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.job.Job - Waiting time ns: 190259, Backend time ns: 238322307
+2021-07-31 22:04:56,773 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Request:  {'body': bytearray(b'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')}
+2021-07-31 22:05:35,672 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-07-31 22:05:35,673 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-07-31 22:05:35,684 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-07-31 22:05:35,684 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-07-31 22:05:35,684 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-07-31 22:05:35,684 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-07-31 22:05:35,685 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-07-31 22:05:35,675 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-07-31 22:05:35,674 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-07-31 22:05:35,686 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-07-31 22:05:35,686 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-07-31 22:05:35,686 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-07-31 22:05:35,686 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-07-31 22:05:35,686 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-07-31 22:05:35,686 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-07-31 22:05:35,691 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-07-31 22:05:35,691 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-07-31 22:05:35,691 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-07-31 22:05:35,691 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-07-31 22:05:35,692 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-07-31 22:05:35,692 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-07-31 22:05:35,692 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-07-31 22:05:35,692 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-07-31 22:05:35,692 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-07-31 22:05:35,693 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-07-31 22:05:35,694 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-07-31 22:05:35,694 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-07-31 22:05:35,694 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-07-31 22:05:35,694 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-07-31 22:05:35,694 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-07-31 22:05:35,695 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-07-31 22:05:35,695 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-07-31 22:05:35,695 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-07-31 22:05:35,695 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-07-31 22:05:35,696 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-07-31 22:05:35,723 [INFO ] epollEventLoopGroup-5-4 org.pytorch.serve.wlm.WorkerThread - 9003 Worker disconnected. WORKER_MODEL_LOADED
+2021-07-31 22:05:35,724 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-07-31 22:05:35,724 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireInterruptibly(AbstractQueuedSynchronizer.java:944)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly(AbstractQueuedSynchronizer.java:1263)
+	at java.base/java.util.concurrent.locks.ReentrantLock.lockInterruptibly(ReentrantLock.java:317)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:185)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-07-31 22:05:35,727 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-07-31 22:05:35,727 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Inference model server stopped.
+2021-07-31 22:05:35,728 [INFO ] epollEventLoopGroup-2-2 org.pytorch.serve.ModelServer - Management model server stopped.
+2021-07-31 22:05:35,728 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Metrics model server stopped.
+2021-07-31 22:05:35,731 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-07-31 22:05:35,731 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-07-31 22:05:35,733 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9003 in 1 seconds.
+2021-07-31 22:05:35,799 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stdout
+2021-07-31 22:05:35,799 [INFO ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stderr
+2021-07-31 22:05:35,800 [INFO ] epollEventLoopGroup-5-2 org.pytorch.serve.wlm.WorkerThread - 9001 Worker disconnected. WORKER_MODEL_LOADED
+2021-07-31 22:05:35,800 [INFO ] epollEventLoopGroup-5-1 org.pytorch.serve.wlm.WorkerThread - 9002 Worker disconnected. WORKER_MODEL_LOADED
+2021-07-31 22:05:35,800 [INFO ] epollEventLoopGroup-5-3 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_MODEL_LOADED
+2021-07-31 22:05:35,803 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-07-31 22:05:35,803 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireInterruptibly(AbstractQueuedSynchronizer.java:944)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly(AbstractQueuedSynchronizer.java:1263)
+	at java.base/java.util.concurrent.locks.ReentrantLock.lockInterruptibly(ReentrantLock.java:317)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:185)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-07-31 22:05:35,804 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-07-31 22:05:35,804 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-07-31 22:05:35,805 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-07-31 22:05:35,805 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9000 in 1 seconds.
+2021-07-31 22:05:35,803 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-07-31 22:05:35,807 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2133)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:513)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:675)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:189)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-07-31 22:05:35,807 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-07-31 22:05:35,808 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-07-31 22:05:35,808 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-07-31 22:05:35,808 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9002 in 1 seconds.
+2021-07-31 22:05:35,804 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-07-31 22:05:35,808 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2133)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:513)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:675)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:189)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-07-31 22:05:35,808 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-07-31 22:05:35,809 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-07-31 22:05:35,809 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-07-31 22:05:35,809 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9001 in 1 seconds.
+2021-07-31 22:05:35,829 [INFO ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stderr
+2021-07-31 22:05:35,829 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stdout
+2021-07-31 22:05:35,832 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stdout
+2021-07-31 22:05:35,832 [INFO ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stderr
+2021-07-31 22:05:35,842 [INFO ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stderr
+2021-07-31 22:05:35,842 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stdout
+2021-07-31 22:05:37,791 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9002
+2021-07-31 22:05:37,791 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9001
+2021-07-31 22:05:37,796 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13911
+2021-07-31 22:05:37,797 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13912
+2021-07-31 22:05:37,798 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:05:37,798 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-07-31 22:05:37,798 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:05:37,798 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9002
+2021-07-31 22:05:37,798 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-07-31 22:05:37,798 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:05:37,798 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9001
+2021-07-31 22:05:37,799 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9003
+2021-07-31 22:05:37,798 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:05:37,800 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13905
+2021-07-31 22:05:37,800 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9000
+2021-07-31 22:05:37,800 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:05:37,800 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-07-31 22:05:37,801 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]13908
+2021-07-31 22:05:37,801 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:05:37,801 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-07-31 22:05:37,801 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9003
+2021-07-31 22:05:37,801 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-07-31 22:05:37,801 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-07-31 22:05:37,802 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-07-31 22:05:37,817 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9001.
+2021-07-31 22:05:37,826 [INFO ] main org.pytorch.serve.ModelServer - Torchserve stopped.
+2021-07-31 22:05:37,828 [INFO ] Thread-0 org.pytorch.serve.ModelServer - Unregistering model ocr_model version 1.0
+2021-07-31 22:05:37,828 [DEBUG] Thread-0 org.pytorch.serve.wlm.ModelVersionedRefs - Removed model: ocr_model version: 1.0
+2021-07-31 22:05:37,837 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-07-31 22:05:37,837 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-07-31 22:05:37,837 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-07-31 22:05:37,838 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9002.
+2021-07-31 22:05:37,838 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-07-31 22:05:37,839 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-07-31 22:05:37,841 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-07-31 22:05:37,842 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-07-31 22:05:37,842 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9000.
+2021-07-31 22:05:37,844 [INFO ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stderr
+2021-07-31 22:05:37,842 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stdout
+2021-07-31 22:05:37,842 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-07-31 22:05:37,852 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-07-31 22:05:38,110 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-07-31 22:05:38,111 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-07-31 22:05:38,111 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-07-31 22:05:38,115 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-07-31 22:05:38,116 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-07-31 22:05:38,116 [INFO ] epollEventLoopGroup-5-6 org.pytorch.serve.wlm.WorkerThread - 9002 Worker disconnected. WORKER_SCALED_DOWN
+2021-07-31 22:05:38,116 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-07-31 22:05:38,117 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-07-31 22:05:38,115 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 268358990
+2021-07-31 22:05:38,118 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-07-31 22:05:38,119 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-07-31 22:05:38,120 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-07-31 22:05:38,123 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stdout
+2021-07-31 22:05:38,123 [INFO ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stderr
+2021-07-31 22:05:38,125 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-07-31 22:05:38,125 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-07-31 22:05:38,125 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-07-31 22:05:38,125 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 308539331
+2021-07-31 22:05:38,125 [INFO ] epollEventLoopGroup-5-5 org.pytorch.serve.wlm.WorkerThread - 9001 Worker disconnected. WORKER_SCALED_DOWN
+2021-07-31 22:05:38,125 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-07-31 22:05:38,126 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-07-31 22:05:38,126 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-07-31 22:05:38,127 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-07-31 22:05:38,127 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-07-31 22:05:38,127 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-07-31 22:05:38,129 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-07-31 22:05:38,130 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-07-31 22:05:38,130 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-07-31 22:05:38,131 [INFO ] epollEventLoopGroup-5-7 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_SCALED_DOWN
+2021-07-31 22:05:38,131 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-07-31 22:05:38,132 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 279578946
+2021-07-31 22:05:38,132 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-07-31 22:05:38,132 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-07-31 22:05:38,132 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-07-31 22:05:38,132 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-07-31 22:05:38,133 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-07-31 22:05:38,133 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-07-31 22:05:38,133 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-07-31 22:05:38,134 [INFO ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stderr
+2021-07-31 22:05:38,134 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stdout
+2021-07-31 22:05:38,135 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stdout
+2021-07-31 22:05:38,135 [INFO ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stderr
+2021-07-31 22:05:38,225 [INFO ] Thread-0 org.pytorch.serve.wlm.ModelManager - Model ocr_model unregistered.
+2021-08-04 13:24:32,259 [INFO ] main org.pytorch.serve.ModelServer - 
+Torchserve version: 0.3.1
+TS Home: /home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages
+Current directory: /home/manhbui/manhbq_workspace/OcrTool
+Temp directory: /tmp
+Number of GPUs: 0
+Number of CPUs: 4
+Max heap size: 1966 M
+Python executable: /home/manhbui/anaconda3/envs/manhbq/bin/python
+Config file: ./serve/config.properties
+Inference address: http://127.0.0.1:8085
+Management address: http://127.0.0.1:8086
+Metrics address: http://127.0.0.1:8087
+Model Store: /home/manhbui/manhbq_workspace/OcrTool/serve/model_store
+Initial Models: ./serve/model_store/ocr_model.mar
+Log dir: /home/manhbui/manhbq_workspace/OcrTool/logs
+Metrics dir: /home/manhbui/manhbq_workspace/OcrTool/logs
+Netty threads: 0
+Netty client threads: 0
+Default workers per model: 4
+Blacklist Regex: N/A
+Maximum Response Size: 6553500
+Maximum Request Size: 6553500
+Prefer direct buffer: false
+Allowed Urls: [file://.*|http(s)?://.*]
+Custom python dependency for model allowed: false
+Metrics report format: prometheus
+Enable metrics API: true
+2021-08-04 13:24:32,315 [INFO ] main org.pytorch.serve.ModelServer - Loading initial models: ./serve/model_store/ocr_model.mar
+2021-08-04 13:24:33,246 [INFO ] main org.pytorch.serve.archive.ModelArchive - eTag d12a47b1c63d46f49521871f914c71da
+2021-08-04 13:24:33,263 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Adding new version 1.0 for model ocr_model
+2021-08-04 13:24:33,263 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model ocr_model
+2021-08-04 13:24:33,264 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model ocr_model loaded.
+2021-08-04 13:24:33,264 [DEBUG] main org.pytorch.serve.wlm.ModelManager - updateModel: ocr_model, count: 4
+2021-08-04 13:24:33,310 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.
+2021-08-04 13:24:33,471 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9002
+2021-08-04 13:24:33,473 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7493
+2021-08-04 13:24:33,473 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:24:33,475 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:24:33,475 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-08-04 13:24:33,484 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9002
+2021-08-04 13:24:33,533 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9000
+2021-08-04 13:24:33,535 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7491
+2021-08-04 13:24:33,535 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:24:33,535 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-08-04 13:24:33,536 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-08-04 13:24:33,539 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:24:33,584 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9003
+2021-08-04 13:24:33,590 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7494
+2021-08-04 13:24:33,590 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9001
+2021-08-04 13:24:33,590 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:24:33,590 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:24:33,592 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7492
+2021-08-04 13:24:33,592 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:24:33,592 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:24:33,592 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-08-04 13:24:33,592 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9001
+2021-08-04 13:24:33,593 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change null -> WORKER_STARTED
+2021-08-04 13:24:33,593 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9003
+2021-08-04 13:24:33,621 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://127.0.0.1:8085
+2021-08-04 13:24:33,622 [INFO ] main org.pytorch.serve.ModelServer - Initialize Management server with: EpollServerSocketChannel.
+2021-08-04 13:24:33,631 [INFO ] main org.pytorch.serve.ModelServer - Management API bind to: http://127.0.0.1:8086
+2021-08-04 13:24:33,639 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.
+2021-08-04 13:24:33,644 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8087
+2021-08-04 13:24:33,650 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9002.
+2021-08-04 13:24:33,653 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9001.
+2021-08-04 13:24:33,655 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9000.
+2021-08-04 13:24:33,655 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9003.
+2021-08-04 13:24:36,123 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2352
+2021-08-04 13:24:36,123 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2350
+2021-08-04 13:24:36,123 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2350
+2021-08-04 13:24:36,123 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2349
+2021-08-04 13:24:36,123 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-08-04 13:24:36,123 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-08-04 13:24:36,123 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-08-04 13:24:36,124 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-08-04 13:26:04,717 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-08-04 13:26:04,718 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-08-04 13:26:04,720 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-08-04 13:26:04,721 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-08-04 13:26:04,721 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-08-04 13:26:04,723 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Traceback (most recent call last):
+2021-08-04 13:26:04,724 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-08-04 13:26:04,726 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-08-04 13:26:04,728 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-08-04 13:26:04,730 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-08-04 13:26:04,730 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-08-04 13:26:04,730 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-08-04 13:26:04,731 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 182, in <module>
+2021-08-04 13:26:04,733 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-08-04 13:26:04,735 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-08-04 13:26:04,736 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-08-04 13:26:04,737 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-08-04 13:26:04,740 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-08-04 13:26:04,740 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-08-04 13:26:04,742 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-08-04 13:26:04,742 [WARN ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-08-04 13:26:04,745 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     worker.run_server()
+2021-08-04 13:26:04,746 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-08-04 13:26:04,746 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-08-04 13:26:04,746 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-08-04 13:26:04,746 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-08-04 13:26:04,747 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-08-04 13:26:04,747 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-08-04 13:26:04,747 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-08-04 13:26:04,747 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-08-04 13:26:04,747 [WARN ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-08-04 13:26:04,747 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 154, in run_server
+2021-08-04 13:26:04,748 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     self.handle_connection(cl_socket)
+2021-08-04 13:26:04,748 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/model_service_worker.py", line 109, in handle_connection
+2021-08-04 13:26:04,748 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd, msg = retrieve_msg(cl_socket)
+2021-08-04 13:26:04,748 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 29, in retrieve_msg
+2021-08-04 13:26:04,748 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     cmd = _retrieve_buffer(conn, 1)
+2021-08-04 13:26:04,749 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -   File "/home/manhbui/anaconda3/envs/manhbq/lib/python3.7/site-packages/ts/protocol/otf_message_handler.py", line 153, in _retrieve_buffer
+2021-08-04 13:26:04,749 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle -     pkt = conn.recv(length)
+2021-08-04 13:26:04,749 [WARN ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-08-04 13:26:04,755 [WARN ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - KeyboardInterrupt
+2021-08-04 13:26:04,770 [INFO ] epollEventLoopGroup-5-4 org.pytorch.serve.wlm.WorkerThread - 9001 Worker disconnected. WORKER_MODEL_LOADED
+2021-08-04 13:26:04,770 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-08-04 13:26:04,771 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireInterruptibly(AbstractQueuedSynchronizer.java:944)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly(AbstractQueuedSynchronizer.java:1263)
+	at java.base/java.util.concurrent.locks.ReentrantLock.lockInterruptibly(ReentrantLock.java:317)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:185)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-04 13:26:04,776 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-08-04 13:26:04,776 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-08-04 13:26:04,777 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-08-04 13:26:04,778 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9001 in 1 seconds.
+2021-08-04 13:26:04,782 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Inference model server stopped.
+2021-08-04 13:26:04,784 [INFO ] epollEventLoopGroup-2-2 org.pytorch.serve.ModelServer - Management model server stopped.
+2021-08-04 13:26:04,785 [INFO ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stderr
+2021-08-04 13:26:04,786 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stdout
+2021-08-04 13:26:04,788 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Metrics model server stopped.
+2021-08-04 13:26:04,861 [INFO ] epollEventLoopGroup-5-1 org.pytorch.serve.wlm.WorkerThread - 9003 Worker disconnected. WORKER_MODEL_LOADED
+2021-08-04 13:26:04,863 [INFO ] epollEventLoopGroup-5-3 org.pytorch.serve.wlm.WorkerThread - 9002 Worker disconnected. WORKER_MODEL_LOADED
+2021-08-04 13:26:04,864 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-08-04 13:26:04,864 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2133)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:513)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:675)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:189)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-04 13:26:04,871 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-08-04 13:26:04,872 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-08-04 13:26:04,873 [INFO ] epollEventLoopGroup-5-2 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_MODEL_LOADED
+2021-08-04 13:26:04,873 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-08-04 13:26:04,874 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9003 in 1 seconds.
+2021-08-04 13:26:04,875 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-08-04 13:26:04,875 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_MODEL_LOADED
+2021-08-04 13:26:04,875 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2133)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:513)
+	at java.base/java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:675)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:189)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-04 13:26:04,876 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-08-04 13:26:04,876 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-08-04 13:26:04,876 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-08-04 13:26:04,876 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9000 in 1 seconds.
+2021-08-04 13:26:04,876 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Backend worker monitoring thread interrupted or backend worker process died.
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireInterruptibly(AbstractQueuedSynchronizer.java:944)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly(AbstractQueuedSynchronizer.java:1263)
+	at java.base/java.util.concurrent.locks.ReentrantLock.lockInterruptibly(ReentrantLock.java:317)
+	at org.pytorch.serve.wlm.Model.pollBatch(Model.java:185)
+	at org.pytorch.serve.wlm.BatchAggregator.getRequest(BatchAggregator.java:33)
+	at org.pytorch.serve.wlm.WorkerThread.run(WorkerThread.java:182)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-04 13:26:04,877 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_MODEL_LOADED -> WORKER_STOPPED
+2021-08-04 13:26:04,877 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-08-04 13:26:04,877 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-08-04 13:26:04,877 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9002 in 1 seconds.
+2021-08-04 13:26:04,897 [INFO ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stderr
+2021-08-04 13:26:04,897 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stdout
+2021-08-04 13:26:04,902 [INFO ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stderr
+2021-08-04 13:26:04,902 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stdout
+2021-08-04 13:26:04,906 [INFO ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stderr
+2021-08-04 13:26:04,907 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stdout
+2021-08-04 13:26:05,926 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9001
+2021-08-04 13:26:05,927 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7724
+2021-08-04 13:26:05,927 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:26:05,927 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-08-04 13:26:05,927 [INFO ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9001
+2021-08-04 13:26:05,928 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:26:05,931 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9001.
+2021-08-04 13:26:06,019 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9000
+2021-08-04 13:26:06,021 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7735
+2021-08-04 13:26:06,021 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:26:06,022 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:26:06,022 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-08-04 13:26:06,022 [INFO ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-08-04 13:26:06,042 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9000.
+2021-08-04 13:26:06,068 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9003
+2021-08-04 13:26:06,068 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7732
+2021-08-04 13:26:06,068 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:26:06,068 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:26:06,069 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-08-04 13:26:06,073 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Listening on port: /tmp/.ts.sock.9002
+2021-08-04 13:26:06,074 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - [PID]7737
+2021-08-04 13:26:06,074 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Torch worker started.
+2021-08-04 13:26:06,074 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Python runtime: 3.7.10
+2021-08-04 13:26:06,074 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STOPPED -> WORKER_STARTED
+2021-08-04 13:26:06,073 [INFO ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9003
+2021-08-04 13:26:06,075 [INFO ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9002
+2021-08-04 13:26:06,090 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9003.
+2021-08-04 13:26:06,119 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Connection accepted: /tmp/.ts.sock.9002.
+2021-08-04 13:26:06,900 [INFO ] main org.pytorch.serve.ModelServer - Torchserve stopped.
+2021-08-04 13:26:06,903 [INFO ] Thread-0 org.pytorch.serve.ModelServer - Unregistering model ocr_model version 1.0
+2021-08-04 13:26:06,904 [DEBUG] Thread-0 org.pytorch.serve.wlm.ModelVersionedRefs - Removed model: ocr_model version: 1.0
+2021-08-04 13:26:06,906 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-08-04 13:26:06,907 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-08-04 13:26:06,907 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-08-04 13:26:06,910 [INFO ] epollEventLoopGroup-5-7 org.pytorch.serve.wlm.WorkerThread - 9003 Worker disconnected. WORKER_SCALED_DOWN
+2021-08-04 13:26:06,910 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 819760305
+2021-08-04 13:26:06,910 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-08-04 13:26:06,915 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-08-04 13:26:06,916 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-08-04 13:26:06,916 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9003-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-08-04 13:26:06,916 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stderr
+2021-08-04 13:26:06,916 [WARN ] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9003-ocr_model_1.0-stdout
+2021-08-04 13:26:06,916 [DEBUG] W-9003-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-08-04 13:26:06,924 [INFO ] W-9003-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stdout
+2021-08-04 13:26:06,924 [INFO ] W-9003-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9003-ocr_model_1.0-stderr
+2021-08-04 13:26:06,952 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-08-04 13:26:06,952 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-08-04 13:26:06,952 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-08-04 13:26:06,954 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-08-04 13:26:06,954 [INFO ] epollEventLoopGroup-5-8 org.pytorch.serve.wlm.WorkerThread - 9002 Worker disconnected. WORKER_SCALED_DOWN
+2021-08-04 13:26:06,954 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 846747153
+2021-08-04 13:26:06,954 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-08-04 13:26:06,955 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-08-04 13:26:06,956 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9002-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-08-04 13:26:06,956 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stderr
+2021-08-04 13:26:06,956 [WARN ] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9002-ocr_model_1.0-stdout
+2021-08-04 13:26:06,956 [DEBUG] W-9002-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-08-04 13:26:06,964 [INFO ] W-9002-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stderr
+2021-08-04 13:26:06,964 [INFO ] W-9002-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9002-ocr_model_1.0-stdout
+2021-08-04 13:26:06,964 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-08-04 13:26:06,965 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-08-04 13:26:06,965 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-08-04 13:26:06,965 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 1034049946
+2021-08-04 13:26:06,965 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-08-04 13:26:06,965 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-08-04 13:26:06,966 [INFO ] epollEventLoopGroup-5-5 org.pytorch.serve.wlm.WorkerThread - 9001 Worker disconnected. WORKER_SCALED_DOWN
+2021-08-04 13:26:06,966 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-08-04 13:26:06,966 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9001-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-08-04 13:26:06,966 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stderr
+2021-08-04 13:26:06,966 [WARN ] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9001-ocr_model_1.0-stdout
+2021-08-04 13:26:06,966 [DEBUG] W-9001-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-08-04 13:26:06,969 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_STARTED -> WORKER_SCALED_DOWN
+2021-08-04 13:26:06,970 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-08-04 13:26:06,971 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-08-04 13:26:06,971 [INFO ] epollEventLoopGroup-5-6 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_SCALED_DOWN
+2021-08-04 13:26:06,972 [DEBUG] Thread-0 org.pytorch.serve.job.Job - Waiting time ns: 0, Inference time ns: 929425073
+2021-08-04 13:26:06,972 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-08-04 13:26:06,972 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-08-04 13:26:06,973 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.BatchAggregator - Load model failed: ocr_model, error: Worker died.
+2021-08-04 13:26:06,974 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-ocr_model_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-08-04 13:26:06,974 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stderr
+2021-08-04 13:26:06,974 [WARN ] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-ocr_model_1.0-stdout
+2021-08-04 13:26:06,974 [DEBUG] W-9000-ocr_model_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-08-04 13:26:06,976 [INFO ] W-9001-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stderr
+2021-08-04 13:26:06,977 [INFO ] W-9001-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9001-ocr_model_1.0-stdout
+2021-08-04 13:26:06,983 [INFO ] W-9000-ocr_model_1.0-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stderr
+2021-08-04 13:26:06,984 [INFO ] W-9000-ocr_model_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-ocr_model_1.0-stdout
+2021-08-04 13:26:06,991 [INFO ] Thread-0 org.pytorch.serve.wlm.ModelManager - Model ocr_model unregistered.

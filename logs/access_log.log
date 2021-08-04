@@ -1,1 +1,2 @@
 2021-07-16 11:08:11,105 - /127.0.0.1:50008 "POST /predictions/ocr_model HTTP/1.1" 200 474
+2021-07-31 22:04:56,752 - /127.0.0.1:57716 "POST /predictions/ocr_model HTTP/1.1" 200 277

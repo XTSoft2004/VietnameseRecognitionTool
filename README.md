@@ -1,6 +1,6 @@
 ## 1. Archive model
 ```
-torch-model-archiver --model-name ocr_model --serialized-file ./traced_scripts/model_scripts.zip --version 1.0  --export-path model_store --handler ./handler/ocr_handler.py --extra-files ./ManhOCR/tool/config.py,./ManhOCR/model/vocab.py,./ManhOCR/config/base.yml,./traced_scripts/model_scripts/cnn_model.pt,./traced_scripts/model_scripts/decoder_model.pt,./traced_scripts/model_scripts/encoder_model.pt
+torch-model-archiver --model-name ocr_model --serialized-file ./serve/traced_scripts/model_scripts.zip --version 1.0  --export-path /home/manhbui/manhbq_workspace/OcrTool/serve/model_store --handler ./serve/handler/ocr_handler.py --extra-files ./src/ManhOCR/tool/config.py,./src/ManhOCR/model/vocab.py,./src/ManhOCR/config/base.yml,./serve/traced_scripts/model_scripts/cnn_model.pt,./serve/traced_scripts/model_scripts/decoder_model.pt,./serve/traced_scripts/model_scripts/encoder_model.pt
 ```
 
 ## 2. Serve model
@@ -52,3 +52,5 @@ Run:
 ```
 torchserve-dashboard --server.port 8505 -- --config_path ./config.properties
 ```
+
+## 7. Run using docker

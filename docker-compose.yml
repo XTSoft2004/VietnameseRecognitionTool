@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  torchserve:
+    container_name: torchserve
+    build: .
+    ports:
+     - "8080:8080"
+     - "8081:8081"
+    command: torchserve --start --ncs --model-store ./serve/model_store --models ./serve/model_store/ocr_model.mar --foreground --ts-config ./serve/config.properties
