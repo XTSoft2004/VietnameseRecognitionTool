@@ -1,20 +1,14 @@
-from numpy.core.numeric import indices
-from numpy.lib.type_check import imag
 from ts.torch_handler.base_handler import BaseHandler
 import os
 import torch
 import logging
 import numpy as np
 import cv2
-import zipfile
 from collections import defaultdict
 logger = logging.getLogger(__name__)
 from config import Cfg
 from vocab import Vocab
 import base64
-from PIL import Image
-import io
-import json
 
 class OCRHandler(BaseHandler):
     def __init__(self):

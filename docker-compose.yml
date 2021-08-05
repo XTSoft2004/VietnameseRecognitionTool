@@ -1,9 +1,15 @@
 version: '3.5'
 services:
   torchserve:
-    container_name: torchserve
+    image: torchserve
     build: .
     ports:
-     - "8080:8080"
-     - "8081:8081"
+      - "8085:8085"
+      - "8086:8086"
+      - "8087:8087"
     command: torchserve --start --ncs --model-store ./serve/model_store --models ./serve/model_store/ocr_model.mar --foreground --ts-config ./serve/config.properties
+  streamlit:
+    image: torchserve
+    ports: 
+      - "9090:9090"
+    command: streamlit run app.py
