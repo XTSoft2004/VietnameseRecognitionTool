@@ -11,7 +11,7 @@ ip addr show
 ```
 ipv4 address begin with 192.168.x.x
 
-Then, replace the value of ip_addr in file app.py by your ip address
+Then, replace the value of ip_addr in file [app.py](https://github.com/buiquangmanhhp1999/VietnameseRecognitionTool/blob/develop/app.py) by your ip address
 ```python
 ip_addr = "192.168.1.187"
 ```
