@@ -4,7 +4,6 @@ from PIL import Image
 import requests
 import base64
 import cv2
-import socket
 
 max_width_str = f"max-width: 1200px;"
 st.markdown(
@@ -34,11 +33,8 @@ st.markdown(
 """
 )
 
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(("8.8.8.8", 80))
-ipv4_addr = s.getsockname()[0]
-
-url = "http://" + ipv4_addr + ":8085/predictions/ocr_model"
+ip_addr = "192.168.1.187"
+url = "http://" + ip_addr + ":8085/predictions/ocr_model"
 uploaded_file = st.file_uploader("Upload Image", type=[".png", ".jpg", ".jpeg"])
 if uploaded_file is not None:
     image = np.asarray(Image.open(uploaded_file))
