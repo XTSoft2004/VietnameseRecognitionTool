@@ -1,5 +1,5 @@
 __pycached__
 .vscode
 *.pth.tar
-./src/
+src/
 start.sh
