@@ -45,5 +45,4 @@ if uploaded_file is not None:
     st.image(image)
     if response.status_code == 200:
         st.markdown('***Predicted result***: {}'.format(response.text))
-s.close()
 
