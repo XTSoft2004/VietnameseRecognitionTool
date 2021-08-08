@@ -72,16 +72,14 @@ class OCRHandler(BaseHandler):
         """
         Process one single image
         """
-        print('Request: ', req)
         b64_code = req.get('data')
         if b64_code is None:
             b64_code = req.get('body')
 
         # create a stream from the encoded image
-       # Restore OpenCV image from base64 encoding
+        # Restore OpenCV image from base64 encoding
         str_decode = base64.b64decode(b64_code)
         nparr = np.fromstring(str_decode, np.uint8)
-        # img_restore = cv2.imdecode(nparr, cv2.CV_LOAD_IMAGE_COLOR) for python 2
         img_restore = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
         image = np.array(img_restore)
 

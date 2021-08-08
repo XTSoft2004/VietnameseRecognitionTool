@@ -1,6 +1,6 @@
 ## 1. Archive model
 ```
-torch-model-archiver --model-name ocr_model --serialized-file ./serve/traced_scripts/model_scripts.zip --version 1.0  --export-path /home/manhbui/manhbq_workspace/OcrTool/serve/model_store --handler ./serve/handler/ocr_handler.py --extra-files ./src/ManhOCR/tool/config.py,./src/ManhOCR/model/vocab.py,./src/ManhOCR/config/base.yml,./serve/traced_scripts/model_scripts/cnn_model.pt,./serve/traced_scripts/model_scripts/decoder_model.pt,./serve/traced_scripts/model_scripts/encoder_model.pt
+torch-model-archiver --model-name ocr_model --serialized-file ./serve/traced_scripts/model_scripts.zip --version 1.0  --export-path /home/manhbui/manhbq_workspace/VietnameseRecognitionTool/serve/model_store --handler ./serve/handler/ocr_handler.py --extra-files ./src/ManhOCR/tool/config.py,./src/ManhOCR/model/vocab.py,./src/ManhOCR/config/base.yml,./serve/traced_scripts/model_scripts/cnn_model.pt,./serve/traced_scripts/model_scripts/decoder_model.pt,./serve/traced_scripts/model_scripts/encoder_model.pt
 ```
 
 ## 2. Serve model
@@ -15,7 +15,7 @@ streamlit run app.py
 
 ## 4. Inference - Using Rest Api
 ```
-curl http://127.0.0.1:8080/predictions/ocr_model -T ./sample/0.png
+curl http://127.0.0.1:8085/predictions/ocr_model -T ./sample/0.png
 ```
 
 

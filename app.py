@@ -33,7 +33,7 @@ st.markdown(
 """
 )
 
-url = "http://0.0.0.0:8085/predictions/ocr_model"
+url = "http://192.168.1.187:8085/predictions/ocr_model"
 uploaded_file = st.file_uploader("Upload Image", type=[".png", ".jpg", ".jpeg"])
 if uploaded_file is not None:
     image = np.asarray(Image.open(uploaded_file))

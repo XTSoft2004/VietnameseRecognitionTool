@@ -9,7 +9,7 @@ services:
       - "8087:8087"
     command: torchserve --start --ncs --model-store ./serve/model_store --models ./serve/model_store/ocr_model.mar --foreground --ts-config ./serve/config.properties
   streamlit:
-    image: torchserve
+    image: streamlit
     ports: 
-      - "9090:9090"
+      - "8501:8501"
     command: streamlit run app.py
