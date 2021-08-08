@@ -5,14 +5,23 @@ Image Text Recognition Tool
 </p>
 
 ## 2. Deploy by docker
+### 2.1. Check your ip address in ubuntu 
+```
+ip addr show
+```
+ipv4 address begin with 192.168.x.x
 
-### 2.1. Build streamlit image separately
+Then, replace the value of ip_addr in file app.py by your ip address
+```python
+ip_addr = "192.168.1.187"
+```
+### 2.2. Build streamlit image separately
 
 ```
 docker build -t streamlit -f ./DockerfileStreamlit .
 ```
 
-### 2.2 Build and start server 
+### 2.3 Build and start server 
 ```
 docker-compose up
 ```
